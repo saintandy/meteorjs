@@ -1,0 +1,41 @@
+<head>
+  <title>
+    Hannah's Avenue
+  </title>
+  <link rel='stylesheet' type='text/css' href='main.css'/>
+</head>
+
+<body>
+  <header>
+    <div class='header-item'>
+      <a href='main.html'>
+        HOME
+      </a>
+    </div>
+    <div class='header-item'>
+      <a href='about.html'>
+        ABOUT
+      </a>
+    </div>
+    <div class='header-item'>
+      <a href='create.html'>
+        POST
+      </a>
+    </div>
+  </header>
+  <div id='main'>
+    {{> posts}}
+  </div>
+</body>
+
+<template name='posts'>
+  {{#each posts}}
+    <div class='post'>
+      <div class='post-image' style='background-image: url("{{link}}");'>
+      </div>
+      <div class='post-description'>
+        {{description}}
+      </div>
+    </div>
+  {{/each}}
+</template>
